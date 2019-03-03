@@ -2,13 +2,34 @@
   "name": "@wpsh/to-wp-txt",
   "version": "0.1.0",
   "description": "Convert Markdown to WordPress readme.txt format",
-  "main": "src/main.js",
+  "main": "dist/main.common.js",
+  "module": "src/main.js",
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
   "scripts": {
-    "test": "jest"
+    "lint": "standard",
+    "test": "jest",
+    "build:umd": "babel ./src/main.js --plugins transform-es2015-modules-umd --out-file dist/main.common.js"
   },
-  "author": "Kaspars Dambis",
+  "author": "Kaspars Dambis (https://kaspars.net)",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.1.0"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "jest": "^24.1.0",
+    "standard": "^12.0.1"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-umd"
+    ]
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }

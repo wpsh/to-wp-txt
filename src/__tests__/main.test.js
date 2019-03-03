@@ -1,9 +1,8 @@
 import format from '../main'
 
 describe('format syntax format', () => {
-
-  function buildSample( parts ) {
-    return parts.join("\n\n");
+  function buildSample (parts) {
+    return parts.join('\n\n')
   }
 
   it('can format top-level headings', () => {
@@ -19,5 +18,4 @@ describe('format syntax format', () => {
 
     expect(format(from)).toEqual(to)
   })
-
 })
