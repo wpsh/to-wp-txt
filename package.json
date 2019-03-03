@@ -2,6 +2,10 @@
   "name": "@wpsh/to-wp-txt",
   "version": "0.1.0",
   "description": "Convert Markdown to WordPress readme.txt format",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wpsh/to-wp-txt.git"
+  },
   "main": "dist/main.common.js",
   "module": "src/main.js",
   "files": [
