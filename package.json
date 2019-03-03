@@ -6,6 +6,12 @@
     "type": "git",
     "url": "git@github.com:wpsh/to-wp-txt.git"
   },
+  "bugs": {
+    "url": "https://github.com/wpsh/to-wp-txt/issues"
+  },
+  "keywords": [
+    "wordpress"
+  ],
   "main": "dist/main.common.js",
   "module": "src/main.js",
   "files": [
