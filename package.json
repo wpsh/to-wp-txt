@@ -21,8 +21,8 @@
   "scripts": {
     "lint": "standard",
     "test": "jest",
-    "build:umd": "babel ./src/main.js --plugins transform-es2015-modules-umd --out-file dist/main.common.js",
-    "build": "npm run build:umd"
+    "build": "babel ./src/main.js --plugins transform-es2015-modules-umd --out-file ./dist/main.common.js",
+    "prepublish": "npm run build"
   },
   "author": "Kaspars Dambis (https://kaspars.net)",
   "license": "MIT",
