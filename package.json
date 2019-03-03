@@ -1,0 +1,14 @@
+{
+  "name": "@wpsh/to-wp-txt",
+  "version": "0.1.0",
+  "description": "Convert Markdown to WordPress readme.txt format",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Kaspars Dambis",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
