@@ -15,6 +15,20 @@ Install using [`npm`](https://www.npmjs.com) as a development dependency:
 npm install --save-dev @wpsh/to-wp-txt
 ```
 
+## Usage
+
+```js
+const fs = require('fs');
+const towptxt = require('@wpsh/to-wp-txt').default;
+
+fs.readFile('readme.txt.md', 'utf8', (err, readme) => {
+  if (err) throw err;
+  fs.writeFile('readme.txt', towptxt(readme), err => {
+    if (err) throw err;
+  });
+});
+```
+
 
 ## Credits
 
