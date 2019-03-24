@@ -1,5 +1,8 @@
 language: node_js
 
+node_js:
+  - "node"
+
 install:
   - npm install
 
@@ -7,7 +10,14 @@ script:
   - npm run lint
   - npm run test
 
+after_success:
+  - npm run coveralls
+
 notifications:
   email: false
 
 cache: npm
+
+branches:
+  only:
+  - master
