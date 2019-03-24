@@ -5,7 +5,7 @@
  *
  * @return {string}
  */
-function format (content) {
+export default function towptxt (content) {
   const replaceRules = {
     '^#\\s(.+)$': '=== $1 ===',
     '^##\\s(.+)$': '== $1 ==',
@@ -22,5 +22,3 @@ function format (content) {
 
   return content
 }
-
-export default format

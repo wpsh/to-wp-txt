@@ -4,7 +4,7 @@
   "description": "Convert Markdown to WordPress readme.txt format",
   "repository": {
     "type": "git",
-    "url": "git@github.com:wpsh/to-wp-txt.git"
+    "url": "https://github.com/wpsh/to-wp-txt.git"
   },
   "bugs": {
     "url": "https://github.com/wpsh/to-wp-txt/issues"
@@ -21,21 +21,29 @@
   "scripts": {
     "lint": "standard",
     "test": "jest",
-    "build": "babel ./src/main.js --plugins transform-es2015-modules-umd --out-file ./dist/main.common.js",
+    "build": "babel ./src/main.js --out-file ./dist/main.common.js",
     "prepublish": "npm run build"
   },
   "author": "Kaspars Dambis (https://kaspars.net)",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "jest": "^24.1.0",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.0",
+    "jest": "^24.5.0",
     "standard": "^12.0.1"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"
+    ]
   },
   "standard": {
     "env": [
       "jest"
+    ],
+    "ignore": [
+      "/dist/**"
     ]
   }
 }
